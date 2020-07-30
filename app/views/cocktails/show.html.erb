@@ -1,4 +1,15 @@
 <div class="container">
   <h1>🍸 Learn more about: <%= @cocktail.name %></h1>
-  <p></p>
+   <div class="cocktail-card">
+    <% if @cocktail.photo.nil? %>
+      <%= link_to 'Add photo', edit_cocktail_path %>
+    <% else %>
+      <%= image_tag @cocktail.photo %>
+    <% end %>
+    <h3><%= @cocktail.name%></h3>
+    <h4>Catetory: <%= @cocktail.category %></h4>
+    <%= link_to 'Edit photo url', edit_cocktail_path, class: "btn btn-success" %> |
+    <%= link_to 'Back', cocktails_path, class: "btn btn-primary" %>
+
+  </div>
 </div>

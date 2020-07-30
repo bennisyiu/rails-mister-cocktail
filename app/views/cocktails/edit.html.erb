@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>🍹 Give <%= @cocktail.name %> a nice shot! 🍸</h1>
+  <div class="form-card">
+    <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name, disabled: true, hint: "you can't change the name" %>
+    <%= f.input :category, disabled: true, hint: "you can't change the category" %>
+    <%= f.input :photo, label: 'photo url' %>
+    <%= f.button :submit, class: "btn-primary" %>
+    <% end %>
+  </div>

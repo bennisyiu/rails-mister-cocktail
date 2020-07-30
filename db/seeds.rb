@@ -9,17 +9,10 @@ Cocktail.destroy_all
 
 require 'open-uri'
 
-url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink'
 drinks = JSON.parse(open(url).read)
-drinks_arr = []
-i = 0
-loop do
-  drinks_arr << drinks.values[0][i]
-  i += 1
- break if i >= 30
-end
-
+drinks_arr = drinks.values[0]
 drinks_arr.each_with_index { |c, index|
-  Cocktail.create!(name: drinks_arr[index]["strIngredient1"])
+  Cocktail.create!(name: drinks_arr[index]["strDrink"], category: ['Vodka', 'Gin', 'Rum', 'Bourbon', 'Scotch', 'Whiskey', 'Tequila', 'Brandy', 'Other'].sample, photo: drinks_arr[index]["strDrinkThumb"])
   puts "cocktail#{index} created!"
 }

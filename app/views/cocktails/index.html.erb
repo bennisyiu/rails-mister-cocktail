@@ -1,7 +1,42 @@
 <div class="container">
   <h1>Welcome to 🤵 Mr. Cocktail 🍸 , your party buddy!</h1>
   <%= link_to 'Add a new cocktail!', new_cocktail_path, class: "btn btn-primary" %>
-  <% @cocktails.each do |c| %>
-  <h3><%= link_to c.name, c %></h3>
-  <% end %>
+  <h2>Choose by spirit</h2>
+  <div class="cocktail-card">
+    <img src="https://www.liquor.com/thmb/7bsovOaFAeH0_UZ9h1jZuuq8ZK0=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Gin-and-Tonic-720x720-recipe-1194ca2779ea49b9985cb4af11021aea.jpg" alt="vodka">
+    <%= link_to 'Vodka', vodka_cocktails_path, class: "btn btn-warning" %>
+  </div>
+  <div class="cocktail-card">
+    <img src="https://www.liquor.com/thmb/5_QL8Z-1aEFv_gJ5JxTwZH7jzfY=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/50-50-Birthday-Martini-Credit-Jena-Ellenwood_main_720x720-8eed55390584432e9f3f0b4727b92a15.jpg" alt="gin">
+    <%= link_to 'Gin', gin_cocktails_path, class: "btn btn-warning" %>
+  </div>
+  <div class="cocktail-card">
+    <img src="https://www.liquor.com/thmb/KVNiKudsoEikPjqJ8GhHXHJwvs4=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/americano-720x720-article-95bbb8da50dc4de3aff7facca99abca6.jpg" alt="rum">
+    <%= link_to 'Rum', rum_cocktails_path, class: "btn btn-warning" %>
+  </div>
+  <div class="cocktail-card">
+    <img src="https://www.liquor.com/thmb/nwmtt_ZWA7O0YbTVeTcYf2mRWT4=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Switchel-at-Daisies-photo-credit-Ryan_Gorey_article_720x720-9de37d578ff24d4b9af20c6762351312.jpg" alt="bourbon">
+    <%= link_to 'Bourbon', bourbon_cocktails_path, class: "btn btn-warning" %>
+  </div>
+  <div class="cocktail-card">
+    <img src="https://www.liquor.com/thmb/G0BRGj8XH6yJAdTerva6jA-wJkc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/rusty-nail-720x720-recipe-baa8b8fbcf81444ca5906441f51a15c3.jpg" alt="scotch">
+    <%= link_to 'Scotch', scotch_cocktails_path, class: "btn btn-warning" %>
+  </div>
+  <div class="cocktail-card">
+    <img src="https://www.liquor.com/thmb/NwPjAhfPaP4HxHYB-JLCq_T5xg8=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Thick-as-Thieves-main_720x720-9ae0980d4a9c470db85a82457fa6e103.jpg" alt="whiskey">
+    <%= link_to 'Whiskey', whiskey_cocktails_path, class: "btn btn-warning" %>
+  </div>
+  <div class="cocktail-card">
+    <img src="https://www.liquor.com/thmb/3BW_r72_OiCEdCSwk3Ez3jQG2vs=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__08__10151022__margarita-720x720-article-3ef4a1dc383e43f18703f735af00220a.jpg" alt="tequila">
+    <%= link_to 'Tequila', tequila_cocktails_path, class: "btn btn-warning" %>
+  </div>
+  <div class="cocktail-card">
+    <img src="https://www.liquor.com/thmb/EkRh_Lp1I08vYvX4hdj1fasdZCc=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/bagrationi_article_720x720-94e71b6622384bf7a3913d511394338c.jpg" alt="brandy">
+    <%= link_to 'Brandy', brandy_cocktails_path, class: "btn btn-warning" %>
+  </div>
+  <div class="cocktail-card">
+    <img src="https://www.liquor.com/thmb/HTYQdDqLp_HUALyJKZmstD-XwII=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2019__07__12101312__Blue-Hawaii-720x720-recipe-1c521445b9394786abe8215118baf734.jpg" alt="other">
+    <%= link_to 'Other', other_cocktails_path, class: "btn btn-warning" %>
+  </div>
 </div>
+<!-- all 9 categories -->

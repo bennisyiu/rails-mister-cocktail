@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Tequila Specials</h1>
+  <%= link_to 'Add a new cocktail!', new_cocktail_path, class: "btn btn-primary" %>
+  <div class="cocktail-card">
+    <% @cocktails.each do |c| %>
+    <%= image_tag c.photo %>
+    <h3><%= link_to c.name, c %></h3>
+    <% end %>
+  </div>
+  <%= link_to 'Back', cocktails_path, class: "btn btn-primary" %>
+</div>
