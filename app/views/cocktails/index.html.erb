@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Welcome to 🤵 Mr. Cocktail 🍸 , your party buddy!</h1>
+  <%= link_to 'Add a new cocktail!', new_cocktail_path, class: "btn btn-primary" %>
+  <% @cocktails.each do |c| %>
+  <h3><%= link_to c.name, c %></h3>
+  <% end %>
+</div>
