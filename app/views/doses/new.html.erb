@@ -2,6 +2,7 @@
   <h4>Add a dose</h4>
   <%= simple_form_for([@cocktail, @dose]) do |f| %>
   <%= f.input :description, hint: '1 indegredient/dose' %>
+  <%= f.association :ingredient, collection: Ingredient.all %>
   <%= f.button :submit, class: "btn btn-light" %>
   <% end %>
 </div>
