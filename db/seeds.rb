@@ -16,3 +16,12 @@ drinks_arr.each_with_index { |c, index|
   Cocktail.create!(name: drinks_arr[index]["strDrink"], category: ['Vodka', 'Gin', 'Rum', 'Bourbon', 'Scotch', 'Whiskey', 'Tequila', 'Brandy', 'Other'].sample, photo: drinks_arr[index]["strDrinkThumb"])
   puts "cocktail#{index} created!"
 }
+url2 = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+ingreds = JSON.parse(open(url2).read)
+ingreds_arr = ingreds.values[0]
+ingreds_arr.each_with_index { |ingred, index|
+  Ingredient.create!(name: ingreds_arr[index]["strIngredient1"])
+  puts "Ingredient#{index} created!"
+}
+
+

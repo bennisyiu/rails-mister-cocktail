@@ -1,2 +1,9 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<div class="container">
+  <h4>How to make ....</h4>
+  <p>Description</p>
+  <%= form_for[@cocktail, @dose] do |f| %>
+  <%= f.input :description, hint: 'Be Create!' %>
+  <%= f.button :form, class: "btn btn-light" %>
+  <% end %>
+
+</div>
