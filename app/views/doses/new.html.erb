@@ -1,9 +1,7 @@
 <div class="container">
-  <h4>How to make ....</h4>
-  <p>Description</p>
-  <%= form_for[@cocktail, @dose] do |f| %>
-  <%= f.input :description, hint: 'Be Create!' %>
-  <%= f.button :form, class: "btn btn-light" %>
+  <h4>Add a dose</h4>
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.input :description, hint: '1 indegredient/dose' %>
+  <%= f.button :submit, class: "btn btn-light" %>
   <% end %>
-
 </div>

@@ -4,7 +4,7 @@
     <% if @cocktail.photo.nil? %>
       <%= link_to 'Add photo', edit_cocktail_path, class: "btn btn-info" %>
     <% else %>
-      <%= image_tag @cocktail.photo, width: 300, height: 300 %>
+      <%= image_tag @cocktail.photo, width: 400, height: 500 %>
     <% end %>
     <h3><%= @cocktail.name%></h3>
     <h4>Catetory: <%= @cocktail.category %></h4>

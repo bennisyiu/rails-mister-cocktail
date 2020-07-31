@@ -16,6 +16,7 @@ class DosesController < ApplicationController
       redirect_to cocktail_path(:cocktail_id)
     else
       render 'new'
+    end
   end
 
   def destroy
