@@ -3,7 +3,7 @@
   <%= link_to 'Add a new cocktail!', new_cocktail_path, class: "btn btn-primary" %>
   <div class="cocktail-card-grid">
     <% @cocktails.each do |c| %>
-    <%= image_tag c.photo %>
+    <%= image_tag c.photo, width: 300, height: 350 %>
     <h3><%= link_to c.name, c %></h3>
     <% end %>
   </div>
