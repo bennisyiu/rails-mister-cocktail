@@ -1,22 +1,23 @@
 <div class="container">
   <h1>🍸 Learn more about: <%= @cocktail.name %></h1>
-   <div class="cocktail-card">
+   <div class="cocktail-card-img">
     <% if @cocktail.photo.nil? %>
       <%= link_to 'Add photo', edit_cocktail_path, class: "btn btn-info" %>
     <% else %>
-      <%= image_tag @cocktail.photo, width: 400, height: 500 %>
+      <%= image_tag @cocktail.photo, width: 500, height: 500%>
     <% end %>
     <h3><%= @cocktail.name%></h3>
     <h4>Catetory: <%= @cocktail.category %></h4>
     <%= link_to 'Edit photo url', edit_cocktail_path, class: "btn btn-success" %> |
-    <%= link_to 'Back', cocktails_path, class: "btn btn-primary" %> | <%= link_to 'Add Description', new_cocktail_dose_path(@cocktail), class: "btn btn-info"  %>
+    <%= link_to 'Back', cocktails_path, class: "btn btn-primary" %> | <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: "btn btn-info"  %>
   </div>
   <div class="dose-des">
     <h4>Doses</h4>
       <ul>
       <% @cocktail.doses.each do |dose| %>
-      <li><%= dose.description %></li>
-      <%= link_to 'Delete dose', cocktail_path(@cocktail), method: :delete, data: { confirm: 'are you sure??'}, class: "btn btn-danger" %>
+      <li><%= dose.description %> | <%= dose.ingredient.name %></li>
+
+      <%= link_to 'Delete dose', dose_path(dose), method: :delete, data: { confirm: 'are you sure??'}, class: "btn btn-danger" %>
       <% end %>
     </ul>
   </div>
