@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Whishkey Specials</h1>
   <%= link_to 'Add a new cocktail!', new_cocktail_path, class: "btn btn-primary" %>
-   <div class="card-container">
+   <div class="card-container-grid">
      <div class="cocktail-card">
       <% @cocktails.each do |c| %>
       <%= image_tag c.photo, width: 300, height: 300 %>
