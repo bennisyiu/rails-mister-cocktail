@@ -1,11 +1,16 @@
 <div class="container">
   <h1>Vokda Specials</h1>
-  <%= link_to 'Add a new cocktail!', new_cocktail_path, class: "btn btn-primary" %>
-  <div class="cocktail-card-grid">
+  <%= link_to 'Add new', new_cocktail_path, class: "btn btn-primary mb-3 rounded" %> | <%= link_to 'Back', cocktails_path, class: "btn btn-warning mb-3 rounded" %>
+  <div class="row">
     <% @cocktails.each do |c| %>
-    <%= image_tag c.photo, width: 300, height: 350 %>
-    <h3><%= link_to c.name, c %></h3>
+      <div class="cocktail-card col-xs-12 col-sm-4 ">
+        <%= image_tag c.photo, width: 300, height: 350 %>
+        <div class="cocktail-name">
+          <h3><%= link_to c.name, c %></h3>
+        </div>
+      </div>
     <% end %>
   </div>
-  <%= link_to 'Back', cocktails_path, class: "btn btn-primary" %>
 </div>
+
+

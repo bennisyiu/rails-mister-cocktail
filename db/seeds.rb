@@ -24,4 +24,3 @@ ingreds_arr.each_with_index { |ingred, index|
   puts "Ingredient#{index} created!"
 }
 
-

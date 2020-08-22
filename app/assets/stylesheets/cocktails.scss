@@ -11,8 +11,20 @@ img.cocktail-card-img  {
   height: 250px;
 }
 
-.cocktail-card-grid {
+.spirit-specials {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 15px;
 }
+
+.cocktail-name {
+  margin: 15px auto;
+  text-align: left;
+}
+
+.container2 h2 {
+  text-align: center;
+  margin: 15px auto;
+}
+
+
